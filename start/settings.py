@@ -21,7 +21,7 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "mywebsite.example"]
 
 INSTALLED_APPS = [
     "start",
-    "polls.apps.PollsConfig",
+    "polls",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -58,7 +58,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "start.wsgi.application"
+WSGI_APPLICATION = "start.wsgi.app"
 
 
 # Database
