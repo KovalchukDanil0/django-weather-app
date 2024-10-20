@@ -134,7 +134,8 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [path.join(BASE_DIR, "static")]
 STATIC_ROOT = path.join(BASE_DIR, "staticfiles_build", "static")
-COMPRESS_ROOT = STATIC_URL
+COMPRESS_ROOT = BASE_DIR
+COMPRESS_OUTPUT_DIR = "tmp"
 
 
 STATICFILES_FINDERS = ["compressor.finders.CompressorFinder"]
