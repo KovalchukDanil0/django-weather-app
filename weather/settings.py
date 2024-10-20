@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "app",
-    "compressor",
+    "django_sass",
 ]
 
 MIDDLEWARE = [
@@ -70,8 +70,6 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
-
-COMPRESS_PRECOMPILERS = (("text/x-scss", "django_libsass.SassCompiler"),)
 
 
 WSGI_APPLICATION = "weather.wsgi.app"
@@ -134,8 +132,6 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_DIRS = [path.join(BASE_DIR, "static")]
 STATIC_ROOT = path.join(BASE_DIR, "staticfiles_build", "static")
-COMPRESS_ROOT = BASE_DIR
-COMPRESS_OUTPUT_DIR = "tmp"
 
 
 STATICFILES_FINDERS = ["compressor.finders.CompressorFinder"]
