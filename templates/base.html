@@ -1,9 +1,13 @@
 {% load static %}
+{% load compress %}
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="style.css" />
+    {% compress css %}
+      <link type="text/x-scss" href="{% static 'css/style.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
+
     <title>{% block title %}My amazing site{% endblock %}</title>
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
   </head>
