@@ -7,23 +7,23 @@
 <div class="weather-container">
     <h1 class="weather-header">Weather App</h1>
 
-    <h2 class="weather-location">New York, US</h2>
+    <h2 class="weather-location">{{ timezone }}</h2>
 
     <div class="weather-info">
         <img class="weather-icon" src="weather-icon.png" alt="Weather Icon">
 
         <div class="weather-details">
-            <h1>15°C</h1>
-            <h3>Cloudy</h3>
-            {{ info }}
+            <h1>{{ temperature }}{{ temperature_unit }}</h1>
+            <h3>{{ weather_description }}</h3>
+            
         </div>
     </div>
     <div class="weather-extra">
         <div class="humidity">
-            <h4>Humidity: <span id="humidity">70%</span></h4>
+            <h4>Humidity: <span>{{ humidity }}%</span></h4>
         </div>
         <div class="wind">
-            <h4>Wind Speed: <span id="wind-speed">10 km/h</span></h4>
+            <h4>Wind Speed: <span>{{ wind_speed }} {{ wind_speed_unit }}</span></h4>
         </div>
     </div>
 </div>
