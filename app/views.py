@@ -1,6 +1,4 @@
-from json import loads
-from urllib.request import urlopen
-
+import requests
 from django.db.models import F
 from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
@@ -11,11 +9,19 @@ from .models import Choice, Question
 
 
 def index(request: HttpRequest, template_name="app/home.html"):
+    ip_address = request.META.get("REMOTE_ADDR")
 
-    with urlopen(
-        "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
-    ) as response:
-        json = loads(response.read())
+    ip_info = requests.get(f"http://ip-api.com/json/{ip_address}").json()
+
+    print(ip_info)
+
+    lat = ip_info["lat"]
+    lon = ip_info["lon"]
+
+    open_meteo = requests.get(
+        f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
+    ).json()
+    print(open_meteo)
 
     args = {"latitude": json["latitude"]}
     return render(request, template_name, args)

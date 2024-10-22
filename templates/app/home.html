@@ -4,7 +4,27 @@
 
 {% block content %}
 
-<h1>PLACEHOLDER</h1>
-<p>{{ latitude }}</p>
+<div class="weather-container">
+    <h1 class="weather-header">Weather App</h1>
+
+    <h2 class="weather-location">New York, US</h2>
+
+    <div class="weather-info">
+        <img class="weather-icon" src="weather-icon.png" alt="Weather Icon">
+
+        <div class="weather-details">
+            <h1>15°C</h1>
+            <h3>Cloudy</h3>
+        </div>
+    </div>
+    <div class="weather-extra">
+        <div class="humidity">
+            <h4>Humidity: <span id="humidity">70%</span></h4>
+        </div>
+        <div class="wind">
+            <h4>Wind Speed: <span id="wind-speed">10 km/h</span></h4>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

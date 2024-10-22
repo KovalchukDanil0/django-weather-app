@@ -72,26 +72,24 @@ img.weather-icon {
   margin-right: 20px;
 }
 
-div.weather-details {
-  h1 {
-    font-size: 48px;
-    color: var(--container-primary-color);
-    margin-bottom: 10px;
-  }
+div.weather-details h1 {
+  font-size: 48px;
+  color: var(--container-primary-color);
+  margin-bottom: 10px;
+}
 
-  h3 {
-    font-size: 18px;
-    color: var(--container-secondary-color);
-  }
+div.weather-details h3 {
+  font-size: 18px;
+  color: var(--container-secondary-color);
 }
 
 div.weather-extra {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+}
 
-  h4 {
-    font-size: 16px;
-    color: var(--container-primary-color);
-  }
+div.weather-extra h4 {
+  font-size: 16px;
+  color: var(--container-primary-color);
 }
