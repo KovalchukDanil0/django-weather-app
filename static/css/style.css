@@ -5,6 +5,7 @@
   --container-shadow-color: #0000001a;
   --container-primary-color: #00796b;
   --container-secondary-color: #004d40;
+  --sun-color: #dfb056;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +16,7 @@
     --container-shadow-color: #7171711a;
     --container-primary-color: #47bfb1;
     --container-secondary-color: #1eaa93;
+    --sun-color: #ffa700;
   }
 }
 
@@ -40,56 +42,61 @@ body {
 
 div.weather-container {
   background-color: var(--container-color);
-  border-radius: 15px;
-  padding: 30px;
-  width: 350px;
-  box-shadow: 0 8px 16px var(--container-shadow-color);
+  border-radius: 0.938rem;
+  padding: 1.875rem;
+  width: 75rem;
+  height: 42rem;
+  box-shadow: 0 8px 1rem var(--container-shadow-color);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 h1.weather-header {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--container-primary-color);
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 h2.weather-location {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--container-secondary-color);
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 div.weather-info {
+  margin: 5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--container-primary-color);
 }
 
-img.weather-icon {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+svg.weather-icon {
+  color: var(--sun-color);
+  width: 6.25rem;
+  height: 6.25rem;
+  margin-right: 1.25rem;
 }
 
 div.weather-details h1 {
-  font-size: 48px;
+  font-size: 3rem;
   color: var(--container-primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 div.weather-details h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--container-secondary-color);
 }
 
 div.weather-extra {
-  margin-top: 20px;
+  margin-top: auto;
   display: flex;
   justify-content: space-between;
 }
 
 div.weather-extra h4 {
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--container-primary-color);
 }

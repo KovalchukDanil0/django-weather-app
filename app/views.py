@@ -9,30 +9,60 @@ def parse_weather_code(code: int):
     match code:
         case 0:
             weather_description = "Clear sky"
-        case 1 | 2 | 3:
-            weather_description = "Mainly clear, partly cloudy, and overcast"
-        case 45 | 48:
-            weather_description = "Fog and depositing rime fog"
-        case 51 | 53 | 55:
-            weather_description = "Drizzle: Light, moderate, and dense intensity"
-        case 56 | 57:
-            weather_description = "Freezing Drizzle: Light and dense intensity"
-        case 61 | 63 | 65:
-            weather_description = "Rain: Slight, moderate and heavy intensity"
-        case 66 | 67:
-            weather_description = "Freezing Rain: Light and heavy intensity"
-        case 71 | 73 | 75:
-            weather_description = "Snow fall: Slight, moderate, and heavy intensity"
+        case 1:
+            weather_description = "Mainly clear"
+        case 2:
+            weather_description = "Partly cloudy"
+        case 3:
+            weather_description = "Overcast"
+        case 45:
+            weather_description = "Fog"
+        case 48:
+            weather_description = "Depositing rime fog"
+        case 51:
+            weather_description = "Drizzle: light"
+        case 53:
+            weather_description = "Drizzle: moderate"
+        case 55:
+            weather_description = "Drizzle: dense intensity"
+        case 56:
+            weather_description = "Freezing Drizzle: light"
+        case 57:
+            weather_description = "Freezing Drizzle: dense intensity"
+        case 61:
+            weather_description = "Rain: slight"
+        case 63:
+            weather_description = "Rain: moderate"
+        case 65:
+            weather_description = "Rain: heavy intensity"
+        case 66:
+            weather_description = "Freezing Rain: light"
+        case 67:
+            weather_description = "Freezing Rain: heavy intensity"
+        case 71:
+            weather_description = "Snow fall: slight"
+        case 73:
+            weather_description = "Snow fall: moderate"
+        case 75:
+            weather_description = "Snow fall: heavy intensity"
         case 77:
             weather_description = "Snow grains"
-        case 80 | 81 | 82:
-            weather_description = "Rain showers: Slight, moderate, and violent"
-        case 85 | 86:
-            weather_description = "Snow showers slight and heavy"
+        case 80:
+            weather_description = "Rain showers: slight"
+        case 81:
+            weather_description = "Rain showers: moderate"
+        case 82:
+            weather_description = "Rain showers: violent"
+        case 85:
+            weather_description = "Snow showers slight"
+        case 86:
+            weather_description = "Snow showers heavy"
         case 95:
             weather_description = " Thunderstorm: Slight or moderate"
-        case 95:
-            weather_description = "Thunderstorm with slight and heavy hail"
+        case 96:
+            weather_description = "Thunderstorm slight"
+        case 99:
+            weather_description = "Thunderstorm heavy hail"
 
     return weather_description
 

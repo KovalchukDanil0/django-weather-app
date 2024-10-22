@@ -140,5 +140,3 @@ STATICFILES_FINDERS = ["compressor.finders.CompressorFinder"]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-GEOIP_PATH = path.join(BASE_DIR, "geoip")
