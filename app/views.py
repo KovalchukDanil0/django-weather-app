@@ -9,25 +9,25 @@ def parse_weather_code(code: int):
     match code:
         case 0:
             weather_description = "Clear sky"
-        case 1, 2, 3:
+        case 1 | 2 | 3:
             weather_description = "Mainly clear, partly cloudy, and overcast"
-        case 45, 48:
+        case 45 | 48:
             weather_description = "Fog and depositing rime fog"
-        case 51, 53, 55:
+        case 51 | 53 | 55:
             weather_description = "Drizzle: Light, moderate, and dense intensity"
-        case 56, 57:
+        case 56 | 57:
             weather_description = "Freezing Drizzle: Light and dense intensity"
-        case 61, 63, 65:
+        case 61 | 63 | 65:
             weather_description = "Rain: Slight, moderate and heavy intensity"
-        case 66, 67:
+        case 66 | 67:
             weather_description = "Freezing Rain: Light and heavy intensity"
-        case 71, 73, 75:
+        case 71 | 73 | 75:
             weather_description = "Snow fall: Slight, moderate, and heavy intensity"
         case 77:
             weather_description = "Snow grains"
-        case 80, 81, 82:
+        case 80 | 81 | 82:
             weather_description = "Rain showers: Slight, moderate, and violent"
-        case 85, 86:
+        case 85 | 86:
             weather_description = "Snow showers slight and heavy"
         case 95:
             weather_description = " Thunderstorm: Slight or moderate"
