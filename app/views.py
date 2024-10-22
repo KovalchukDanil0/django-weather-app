@@ -23,7 +23,7 @@ def index(request: HttpRequest, template_name="app/home.html"):
     ).json()
     print(open_meteo)
 
-    args = {"latitude": json["latitude"]}
+    args = {"latitude": lat}
     return render(request, template_name, args)
 
 
