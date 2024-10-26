@@ -58,7 +58,7 @@ def parse_weather_code(code: int):
         case 86:
             weather_description = "Snow showers heavy"
         case 95:
-            weather_description = " Thunderstorm: Slight or moderate"
+            weather_description = "Thunderstorm: Slight or moderate"
         case 96:
             weather_description = "Thunderstorm slight"
         case 99:
